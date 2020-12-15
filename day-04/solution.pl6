@@ -39,7 +39,6 @@ sub solve($input-file) {
 multi sub MAIN("part1", "test"){
     ok solve("input-test") == 2, " => 2";
 }
-
 multi sub MAIN("part1") {
     say solve("input");
 }
@@ -47,7 +46,7 @@ multi sub MAIN("part1") {
 # Day 4, Problem 2
 
 sub check-height($hgt){
-    my $result = do if $hgt ~~ /^$<height> = (\d+) $<unit> = (in || cm)$/ {
+    my $result = do if $ ~~ /^$<height> = (\d+) $<unit> = (in || cm)$/ {
         so ((~$<unit> eq "cm" && 150 <= ~$<height>.Numeric <= 193) ||
         (~$<unit> eq "in" && 59 <= ~$<height>.Numeric <= 76));
     } else{
@@ -73,7 +72,6 @@ sub check-for-values(%passport){
     check-eye-color(%passport<ecl>) &&
     check-height (%passport<hgt>);
 }
-
 sub solve2($input-file){
     my @passports = load-input($input-file);
     # Count vlid passports
