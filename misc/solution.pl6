@@ -1,6 +1,6 @@
 use Test;
 
-# Day 3, Problem 1
+# Problem 1
 
 sub solve(@input) {
 }
@@ -13,7 +13,7 @@ multi sub MAIN("part1") {
     #say solve("input".IO.lines());
 }
 
-# Day 3, Problem 2
+# Problem 2
 
 sub solve2(@input){
 }
